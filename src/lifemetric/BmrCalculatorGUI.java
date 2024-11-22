@@ -194,7 +194,7 @@ public class BmrCalculatorGUI extends javax.swing.JFrame {
         displayTA.setRows(5);
         jScrollPane1.setViewportView(displayTA);
 
-        saveBTN.setText("SAVE");
+        saveBTN.setText("SAVE TO FILE");
         saveBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveBTNActionPerformed(evt);
@@ -202,6 +202,11 @@ public class BmrCalculatorGUI extends javax.swing.JFrame {
         });
 
         deleteBTN.setText("DELETE");
+        deleteBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteBTNActionPerformed(evt);
+            }
+        });
 
         viewBTN.setText("DISPLAY");
         viewBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -211,6 +216,11 @@ public class BmrCalculatorGUI extends javax.swing.JFrame {
         });
 
         searchBTN.setText("SEARCH");
+        searchBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchBTNActionPerformed(evt);
+            }
+        });
 
         nameLB.setText("Name:");
 
@@ -250,17 +260,6 @@ public class BmrCalculatorGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(subtitleLB)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(titleLB, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(176, 176, 176)
-                                .addComponent(returnBTN)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(exitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 6, Short.MAX_VALUE))
                     .addComponent(jSeparator1)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
@@ -319,17 +318,29 @@ public class BmrCalculatorGUI extends javax.swing.JFrame {
                                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(checkBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(saveBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(viewBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(searchBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(deleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(17, 17, 17)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(subtitleLB)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(titleLB, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(176, 176, 176)
+                                        .addComponent(returnBTN)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(exitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(checkBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(saveBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(viewBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(searchBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(deleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -576,7 +587,8 @@ public class BmrCalculatorGUI extends javax.swing.JFrame {
                      "Biotype: " + biotype + "\n" +
                      "Height: " + height + "\n" +
                      "Weight: " + weight + "\n" +
-                     "BMR: " + myBmr.getBmr() + "\n");
+                     "BMR: " + myBmr.getBmr() + "\n" +
+                     "TDEE" + myBmr.getCalories() + "\n");
             
             bw.newLine(); // Add a new line between records
             bw.flush();  // Ensure the data is written to the file immediately
@@ -594,8 +606,9 @@ public class BmrCalculatorGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         for(BmrCalculator myBmr1: userList){
             JOptionPane.showMessageDialog(null, myBmr1.userDetail());
-            //JOptionPane.showMessageDialog(null, cal.userDetail());
         }
+        
+        
           
         //clear fields
         clearFields();
@@ -620,6 +633,36 @@ public class BmrCalculatorGUI extends javax.swing.JFrame {
     private void lightlyRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lightlyRBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_lightlyRBActionPerformed
+
+    private void searchBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBTNActionPerformed
+        // TODO add your handling code here:
+         if(userList.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No-one in system");
+        } else {
+            String searchTerm = JOptionPane.showInputDialog(null, "Enter Name");
+            for(BmrCalculator user: userList){ //forEach loop
+                if(user.getName().equalsIgnoreCase(searchTerm)){
+                    JOptionPane.showMessageDialog(null, user.userDetail());
+                }
+            }
+        }
+    }//GEN-LAST:event_searchBTNActionPerformed
+
+    private void deleteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBTNActionPerformed
+        // TODO add your handling code here:
+        if(userList.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No-one in system");
+        } else {
+            String searchTerm = JOptionPane.showInputDialog(null, "Enter Name");
+            for(int i = 0; i < userList.size(); i++){
+                BmrCalculator temp = userList.get(i);
+                if(temp.getName().equalsIgnoreCase(searchTerm)){
+                    userList.remove(i);
+                    JOptionPane.showMessageDialog(null, "Removed");
+                }
+            }
+        }
+    }//GEN-LAST:event_deleteBTNActionPerformed
 
     /**
      * @param args the command line arguments
