@@ -452,57 +452,62 @@ public class BmrCalculatorGUI extends javax.swing.JFrame {
 
     private void checkBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBTNActionPerformed
         // TODO add your handling code here:
+        //set new instance of Bmr calculator
+        BmrCalculator user = new BmrCalculator();
         //set name and surname
         String name = nameTF.getText();
         String surname = surnameTF.getText();
-        myBmr.setName(name);
-        myBmr.setSurname(surname);
+        user.setName(name);
+        user.setSurname(surname);
         
         //set weight
         double weight = Double.parseDouble(weightTF.getText());
-        myBmr.setWeight(weight);
+        user.setWeight(weight);
         //set height
         double height = Double.parseDouble(heightTF.getText());
-        myBmr.setHeight(height);
+        user.setHeight(height);
         //set age
         int age = Integer.parseInt(ageTF.getText());
-        myBmr.setAge(age);
+        user.setAge(age);
         //set biotype and call function
         if(ectomorphRB.isSelected()){
-            myBmr.setBiotype("ectomorph");
+            user.setBiotype("ectomorph");
         } else if(mesoRB.isSelected()){
-            myBmr.setBiotype("mesomorph");
+            user.setBiotype("mesomorph");
         } else if(endoRB.isSelected()){
-            myBmr.setBiotype("endomorph");
+            user.setBiotype("endomorph");
         }
-        myBmr.calcBiotype();
+        user.calcBiotype();
         //set gender
         if(maleRB.isSelected()){
-            myBmr.setGender("male");
+            user.setGender("male");
         } else {
-            myBmr.setGender("female");
+            user.setGender("female");
         }
         //call BmrCalculator function
-        myBmr.calcBmr();
+        user.calcBmr();
         //set exercise frequency
         if(littleRB.isSelected()){
-            myBmr.setExercise("littleExercise");
+            user.setExercise("littleExercise");
         } else if(lightlyRB.isSelected()){
-            myBmr.setExercise("lightActive");
+            user.setExercise("lightActive");
         } else if(modRB.isSelected()){
-            myBmr.setExercise("moderate");
+            user.setExercise("moderate");
         } else if(veryExRB.isSelected()){
-            myBmr.setExercise("veryActive");
+            user.setExercise("veryActive");
         } else if(superExRB.isSelected()){
-            myBmr.setExercise("superActive");
+            user.setExercise("superActive");
         }
         //calculate the TDEE(amount of calories burnt a day)
-        myBmr.calcCalorie();
-        String bmrOutput = myBmr.getOutput();
+        user.calcCalorie();
+        String bmrOutput = user.getOutput();
+        //add to my arrayList<>();
+        userList.add(user);
         //clear displayTA
         displayTA.setText("");
         // Append the output to the TextArea
         displayTA.append(bmrOutput + "\n");
+        
         System.out.println("Age: " + ageTF.getText()); 
         System.out.println("Height: " + heightTF.getText());
         System.out.println("Weight: " + weightTF.getText());
@@ -551,12 +556,7 @@ public class BmrCalculatorGUI extends javax.swing.JFrame {
         } else {
             biotype = "Endomorph";
         }
-
-        
-        BmrCalculator user = new BmrCalculator();
-        //add to my arrayList<>();
-        userList.add(myBmr);
-        
+   
         try {
             // Create or open the file
             f = new File("userBmr.txt"); // or specify absolute path
@@ -588,22 +588,15 @@ public class BmrCalculatorGUI extends javax.swing.JFrame {
             System.out.println("Exception: " + e.getMessage());
         }
         
-                        for(BmrCalculator cal : userList){
-            //JOptionPane.showMessageDialog(null, myBmr.userDetail());
-            JOptionPane.showMessageDialog(null, cal.userDetail());
-        }
-   
-
     }//GEN-LAST:event_saveBTNActionPerformed
 
     private void viewBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBTNActionPerformed
         // TODO add your handling code here:
-        for(BmrCalculator cal : userList){
-            //JOptionPane.showMessageDialog(null, myBmr.userDetail());
-            JOptionPane.showMessageDialog(null, cal.userDetail());
+        for(BmrCalculator myBmr1: userList){
+            JOptionPane.showMessageDialog(null, myBmr1.userDetail());
+            //JOptionPane.showMessageDialog(null, cal.userDetail());
         }
-        
-        
+          
         //clear fields
         clearFields();
     }//GEN-LAST:event_viewBTNActionPerformed

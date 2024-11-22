@@ -188,3 +188,57 @@ Height: 22
 Weight: 22
 BMR: 252.6
 
+Name: felipe
+Surname: Paneque
+Gender: Male
+Age: 22
+Biotype: Ectomorph
+Height: 170
+Weight: 70
+BMR: 1657.6
+
+Name: stefant
+Surname: jungues
+Gender: Male
+Age: 22
+Biotype: Ectomorph
+Height: 123
+Weight: 120
+BMR: 1863.85
+
+Name: joao
+Surname: pedro
+Gender: Male
+Age: 22
+Biotype: Ectomorph
+Height: 170
+Weight: 70
+BMR: 1657.6
+
+Name: stefany
+Surname: jungues
+Gender: Female
+Age: 25
+Biotype: Ectomorph
+Height: 165
+Weight: 49
+BMR: 1235.35
+
+Name: Felipe
+Surname: Paneque
+Gender: Male
+Age: 22
+Biotype: Ectomorph
+Height: 160
+Weight: 70
+BMR: 0.0
+
+Name: Stefant
+Surname: jungues
+Gender: Female
+Age: 22
+Biotype: Ectomorph
+Height: 175
+Weight: 70
+BMR: 0.0
+
