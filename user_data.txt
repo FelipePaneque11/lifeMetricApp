@@ -1,0 +1,40 @@
+Name: Felipe Paneque
+Age: 22
+Gender: Male
+Body Type: Ectomorph
+Height: 175.0 cm
+Weight: 75.0 kg
+BMR: 1738.75 kcal/day
+------------
+Name: Felipe Paneque
+Age: 22
+Gender: Male
+Body Type: Ectomorph
+Height: 175.0 cm
+Weight: 75.0 kg
+BMR: 1738.75 kcal/day
+------------
+Name: a a
+Age: 12
+Gender: Male
+Body Type: Mesomorph
+Height: 123.0 cm
+Weight: 123.0 kg
+BMR: 1943.75 kcal/day
+------------
+Name: murilo batiuk
+Age: 36
+Gender: Male
+Body Type: Ectomorph
+Height: 180.0 cm
+Weight: 70.0 kg
+BMR: 1650.0 kcal/day
+------------
+Name: Felipe Paneque
+Age: 22
+Gender: Male
+Body Type: Ectomorph
+Height: 175.0 cm
+Weight: 75.0 kg
+BMR: 1738.85 kcal/day
+------------
