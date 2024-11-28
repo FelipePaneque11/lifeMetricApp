@@ -90,7 +90,7 @@ public class HydrationGoalGUI extends javax.swing.JFrame {
             }
         });
 
-        iconLBL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/handicon.png"))); // NOI18N
+        iconLBL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/imgs/handicon.png"))); // NOI18N
         iconLBL.setText("jLabel2");
 
         secondTitleLBL.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
@@ -189,7 +189,7 @@ public class HydrationGoalGUI extends javax.swing.JFrame {
         helpBTN.setBackground(new java.awt.Color(185, 234, 255));
         helpBTN.setFont(new java.awt.Font("Bahnschrift", 0, 12)); // NOI18N
         helpBTN.setForeground(new java.awt.Color(0, 153, 255));
-        helpBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/helpicon_.png"))); // NOI18N
+        helpBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/imgs/helpicon_.png"))); // NOI18N
         helpBTN.setBorderPainted(false);
         helpBTN.setContentAreaFilled(false);
         helpBTN.addActionListener(new java.awt.event.ActionListener() {

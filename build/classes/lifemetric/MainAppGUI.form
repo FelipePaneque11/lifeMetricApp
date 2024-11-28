@@ -47,37 +47,43 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" pref="360" max="-2" attributes="0"/>
+                      </Group>
                       <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="subtitleLBL" min="-2" pref="148" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="hydrationLBL" min="-2" pref="176" max="-2" attributes="0"/>
+                                      <Component id="subtitleLBL" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="sleepLBL" min="-2" pref="178" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="calorieLBL" min="-2" pref="177" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
-                              <Component id="hydrationLBL" alignment="1" min="-2" pref="176" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="sleepLBL" min="-2" pref="178" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="calorieLBL" min="-2" pref="177" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="titleLBL" min="-2" pref="215" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="metricsICON" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="lineSPRT" alignment="0" min="-2" pref="359" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="titleLBL" min="-2" pref="215" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="metricsICON" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="lineSPRT" alignment="0" min="-2" pref="359" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="26" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -155,7 +161,7 @@
         <Component class="javax.swing.JButton" name="hydrationLBL">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/lifemetric/htracker.png"/>
+              <Image iconType="3" name="/lifemetric/imgs/htracker.png"/>
             </Property>
           </Properties>
           <Events>
@@ -165,7 +171,7 @@
         <Component class="javax.swing.JButton" name="calorieLBL">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/lifemetric/ctracker.png"/>
+              <Image iconType="3" name="/lifemetric/imgs/ctracker.png"/>
             </Property>
           </Properties>
           <Events>
@@ -175,7 +181,7 @@
         <Component class="javax.swing.JButton" name="sleepLBL">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/lifemetric/stracker.png"/>
+              <Image iconType="3" name="/lifemetric/imgs/stracker.png"/>
             </Property>
           </Properties>
           <Events>
@@ -185,7 +191,7 @@
         <Component class="javax.swing.JLabel" name="subtitleLBL">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/lifemetric/essential.png"/>
+              <Image iconType="3" name="/lifemetric/imgs/essential.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
@@ -193,7 +199,7 @@
         <Component class="javax.swing.JLabel" name="metricsICON">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/lifemetric/metrics.png"/>
+              <Image iconType="3" name="/lifemetric/imgs/metrics.png"/>
             </Property>
           </Properties>
         </Component>

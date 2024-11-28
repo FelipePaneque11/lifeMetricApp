@@ -45,7 +45,7 @@ public class HydrationTrackerGUI extends javax.swing.JFrame {
 
         whiteJPANEL.setBackground(new java.awt.Color(255, 255, 255));
 
-        iconLBL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/splash.png"))); // NOI18N
+        iconLBL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/imgs/splash.png"))); // NOI18N
 
         titleLBL.setFont(new java.awt.Font("Bahnschrift", 0, 24)); // NOI18N
         titleLBL.setForeground(new java.awt.Color(0, 153, 255));
@@ -95,13 +95,13 @@ public class HydrationTrackerGUI extends javax.swing.JFrame {
             }
         });
 
-        waterbottleLBL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/waterbottleicon.png"))); // NOI18N
+        waterbottleLBL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/imgs/waterbottleicon.png"))); // NOI18N
         waterbottleLBL.setText("jLabel1");
 
-        dropletLBL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/dropleticon.png"))); // NOI18N
+        dropletLBL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/imgs/dropleticon.png"))); // NOI18N
         dropletLBL.setText("jLabel2");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/handicon.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/imgs/handicon.png"))); // NOI18N
         jLabel1.setText("jLabel1");
 
         jButton1.setForeground(new java.awt.Color(51, 204, 255));

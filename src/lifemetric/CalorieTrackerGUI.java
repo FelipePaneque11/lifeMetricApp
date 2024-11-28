@@ -86,9 +86,9 @@ public class CalorieTrackerGUI extends javax.swing.JFrame {
         bmiTF.setText(" A BMI (Body Mass Index) calculator measures body fat based \n on weight and height. By dividing a person’s weight by the \n square of their height, it categorizes them as underweight, \n normal weight, overweight,or obese.  ");
         jScrollPane2.setViewportView(bmiTF);
 
-        bananaLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/banana1.jpg"))); // NOI18N
+        bananaLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/imgs/banana1.jpg"))); // NOI18N
 
-        scaleLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/scale1.jpg"))); // NOI18N
+        scaleLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lifemetric/imgs/scale1.jpg"))); // NOI18N
 
         returnBTN.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         returnBTN.setForeground(new java.awt.Color(0, 204, 51));
@@ -151,7 +151,7 @@ public class CalorieTrackerGUI extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(returnBTN)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

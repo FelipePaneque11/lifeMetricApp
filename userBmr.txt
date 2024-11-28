@@ -1,1 +1,20 @@
+Name: Felipe
+Surname: Paneque
+Gender: Male
+Age: 22
+Biotype: Ectomorph
+Height: 175
+Weight: 75
+BMR: 1738.85
+TDEE: 2086.0
+
+Name: Felipe
+Surname: Malta
+Gender: Male
+Age: 22
+Biotype: Ectomorph
+Height: 174
+Weight: 70
+BMR: 1682.6
+TDEE: 2019.0
 

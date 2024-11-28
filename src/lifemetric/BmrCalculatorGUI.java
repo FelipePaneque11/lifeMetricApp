@@ -18,7 +18,8 @@ import javax.swing.JOptionPane;
  * @author paneq
  */
 public class BmrCalculatorGUI extends javax.swing.JFrame {
-    BmrCalculator myBmr = new BmrCalculator();
+    //set new instance of Bmr calculator
+    BmrCalculator user = new BmrCalculator();
     ArrayList<BmrCalculator> userList = new ArrayList<>();
     
     public BmrCalculatorGUI() {
@@ -463,8 +464,7 @@ public class BmrCalculatorGUI extends javax.swing.JFrame {
 
     private void checkBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBTNActionPerformed
         // TODO add your handling code here:
-        //set new instance of Bmr calculator
-        BmrCalculator user = new BmrCalculator();
+
         //set name and surname
         String name = nameTF.getText();
         String surname = surnameTF.getText();
@@ -522,7 +522,8 @@ public class BmrCalculatorGUI extends javax.swing.JFrame {
         System.out.println("Age: " + ageTF.getText()); 
         System.out.println("Height: " + heightTF.getText());
         System.out.println("Weight: " + weightTF.getText());
-        
+        System.out.println("bmr" + user.getBmr());
+        System.out.println("tdee" + user.getCalories());
         
     }//GEN-LAST:event_checkBTNActionPerformed
     
@@ -587,9 +588,10 @@ public class BmrCalculatorGUI extends javax.swing.JFrame {
                      "Biotype: " + biotype + "\n" +
                      "Height: " + height + "\n" +
                      "Weight: " + weight + "\n" +
-                     "BMR: " + myBmr.getBmr() + "\n" +
-                     "TDEE" + myBmr.getCalories() + "\n");
+                     "BMR: " + user.getBmr() + "\n" +
+                     "TDEE: " + user.getCalories() + "\n");
             
+
             bw.newLine(); // Add a new line between records
             bw.flush();  // Ensure the data is written to the file immediately
             bw.close();// Close the file
