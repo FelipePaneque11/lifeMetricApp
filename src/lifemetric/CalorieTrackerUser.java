@@ -6,7 +6,7 @@ package lifemetric;
 
 /**
  *
- * @author Felipe Paneque
+ * @author Felipe Paneque sNumber 23156635
  */
 public class CalorieTrackerUser {
         private String name,surname,gender,biotype,exercise;

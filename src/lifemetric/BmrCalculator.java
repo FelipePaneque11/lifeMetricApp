@@ -7,7 +7,7 @@ package lifemetric;
 
 /**
  *
- * @author Felipe Paneque
+ * @author Felipe Paneque sNumber 23156635
  */
 public class BmrCalculator extends CalorieTrackerUser{
     private double bmr;

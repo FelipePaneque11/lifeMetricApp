@@ -5,7 +5,7 @@
 package lifemetric;
 /**
  *
- * @author paneq
+ * @author Felipe Paneque sNumber 23156635
  */
 public class CalorieTrackerGUI extends javax.swing.JFrame {
 

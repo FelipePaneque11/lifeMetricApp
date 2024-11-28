@@ -4,11 +4,9 @@
  */
 package lifemetric;
 
-import javax.swing.JOptionPane;
-
 /**
  *
- * @author paneq
+ * @author Felipe Paneque sNumber 23156635
  */
 public class BmiCalculatorGUI extends javax.swing.JFrame {
     BmiCalculator myBmi = new BmiCalculator();

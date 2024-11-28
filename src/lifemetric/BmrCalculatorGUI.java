@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author paneq
+ * @author Felipe Paneque sNumber 23156635
  */
 public class BmrCalculatorGUI extends javax.swing.JFrame {
     //set new instance of Bmr calculator
@@ -606,12 +606,11 @@ public class BmrCalculatorGUI extends javax.swing.JFrame {
 
     private void viewBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBTNActionPerformed
         // TODO add your handling code here:
+        //view people in the array list
         for(BmrCalculator myBmr1: userList){
             JOptionPane.showMessageDialog(null, myBmr1.userDetail());
         }
-        
-        
-          
+
         //clear fields
         clearFields();
     }//GEN-LAST:event_viewBTNActionPerformed
